@@ -1,18 +1,22 @@
 # Relic · AI 角色产品工程记录
+Relic 基于用户授权的人物资料与素材生成 AI 角色。核心产品闭源，这个独立作品集展示产品决策、架构、工程案例和有范围的验证结果。
 
-基于用户授权提供的人物资料和聊天素材构建 AI 角色。产品核心闭源，本仓库仅公开产品、架构、工程案例和脱敏验证摘要。
+**2026-10-29：1.0.0 / build17 开发候选，尚未正式发布，尚未达到提交审核门槛。** 本轮完成主要页面重构和真实模型隔离业务验证；稳定生产托管、最新真机回归、完整跨端及机器人验收仍有缺口。不能将 App Store 记录建立或历史共享成功解释成当前服务可用。
 
-用户流程：手机导入 TXT / CSV / JSON 或电脑扫码授权上传 → 预览素材并确认说话人 → 确认人物资料 → 提取画像并试聊 → 在具备条件时独立连接微信机器人。所谓“蒸馏”使用 MiniMax 提取人物画像、语气和记忆上下文，不涉及模型权重训练。
+用户流程：导入 TXT / CSV / JSON 或授权电脑上传 → 预览与说话人确认 → 人物资料确认 → MiniMax 生成画像 → 聊天与记忆。这里的“蒸馏”是画像和上下文提取，不是训练模型权重。AI 角色不是真实自然人本人。
 
-**当前为开发与验收阶段，尚未正式发布。** iOS 与微信小程序已有真实后端；双方身份绑定已验证，新共享测试角色的资料可双向访问，既有聊天和额度在 iPhone 可读。手机小程序完整共享、记忆双向编辑和删除界面传播仍待验。当前机器人收发未启用，不能据历史记录宣称当下可用。
+## 实际运行界面
+下图为 iOS Simulator 运行中的 Debug 合成资料预览，原始截图，**不是私人聊天、真实业务验收或商店截图**。这是较早 build17 视觉检查；底部预览横幅遮挡、详情副标题对比度和聊天标题已在代码修正，最终再次运行待完成。没有伪造改前图。
 
-开发者主导需求范围、导入及确认流程、账号/数据归属设计、开发整合、调试验收与部署边界；使用 AI 编程助手实施部分代码、测试与文档。见[贡献与第三方说明](docs/ownership-and-attribution.md)。
+| 首页 | 角色详情 | 聊天 |
+|---|---|---|
+| ![合成首页](assets/ui/after-home.png) | ![合成角色详情](assets/ui/after-detail.png) | ![合成聊天](assets/ui/after-chat.png) |
 
-- [产品与流程](docs/product.md) · [高层架构](docs/architecture.md)
-- [工程案例](docs/engineering-case-studies.md)：重试结算、导入确认、身份与共享
-- [真实进度](docs/progress.md) · [验证结果](docs/validation.md) · [后续路线](docs/roadmap.md)
-- [简历项目描述](docs/resume.md)
+- [产品流程](docs/product.md) · [架构与数据归属](docs/architecture.md)
+- [工程案例](docs/engineering-case-studies.md) · [验证结果](docs/validation.md)
+- [当前进度](docs/progress.md) · [路线与限制](docs/roadmap.md)
+- [开发者贡献](docs/ownership-and-attribution.md) · [简历摘要](docs/resume.md)
 
-本轮提供文字证据摘要，没有可供访客登录的公开演示服务，没有公开真实用户数据、源码或安装包。测试成功范围与限制分开记录，无用户量、收入或生产稳定性宣传。
+开发者主导需求、交互、身份与数据边界、整合和验收；使用 AI 编程助手辅助实施代码、测试、界面及文档。未提供访客业务演示服务，不公开核心源码、私有历史、用户素材或安装包，没有虚构用户量、收入或效果指标。
 
-Relic is a closed-source AI character product in active development. This repository documents product decisions, architecture, engineering trade-offs and scoped validation; it is not a source mirror or a production availability claim.
+Relic is a closed-source AI character product in active development. These are scoped engineering results and synthetic UI captures, not a production availability claim.
