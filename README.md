@@ -24,3 +24,12 @@ Relic 基于用户授权的人物资料与素材生成 AI 角色。核心产品�
 开发者主导需求、交互、身份与数据边界、整合和验收；使用 AI 编程助手辅助实施代码、测试、界面及文档。未提供访客业务演示服务，不公开核心源码、私有历史、用户素材或安装包，没有虚构用户量、收入或效果指标。
 
 Relic is a closed-source AI character product in active development. These are scoped engineering results and synthetic UI captures, not a production availability claim.
+
+
+## 2026-11-01 受控验证更新
+
+手机 TestFlight 领取安装仍未核实：已重发原内部邀请，首次启动与之前口头回执有差异，按未验处理。普通自动记忆的后台消费缺口已定位并完成兼容修复，本地隔离回归通过；云端包校验通过，部署操作回执未取得，因此不宣称已向所有用户生效。完整手机创建、蒸馏、聊天和记忆闭环仍待验。
+
+[合成 TXT 导入素材](https://github.com/milkrabbitt/relic-showcase/releases/tag/import-sample-20261030)是完全虚构的测试资料，匿名下载已校验。它用于之后的系统文件选择验收，属于素材预发布，不是 App 发布或已通过的业务证据。没有公开核心源码或私人资料。
+
+补充：本地进一步复现并修复了清空记忆与已领取后台任务的竞态，避免旧摘要复活；资料编辑也纳入写回校验。修正后的候选尚未部署，不能据此声称所有用户已生效。
